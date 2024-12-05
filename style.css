@@ -1,0 +1,378 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --primary-color: #007BFF;
+    --secondary-color: #F8F9FA;
+    --text-color: white;
+    --background-color: #FFFFFF;
+    --font-family: 'Arial', sans-serif;
+}
+
+/* Body and General Styles */
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background: url(/background.jpg);
+    height: 100vh;
+    line-height: 1.6;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Header */
+.header {
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar a{
+  text-decoration: none;
+  color: darkblue;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+.HamBurger{
+  height: 25px;
+  width: 28px;
+  display: none;
+}
+.layer1, .layer2, .layer3{
+  background: white;
+  height: 2.5px;
+  margin-top: 4px;
+  width: 100%;
+  border-radius: 10px;
+}
+.menu-sidebar {
+    display: none;
+}
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: white;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    text-decoration: none;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #ddd;
+}
+.tagline{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.text{
+  margin-right: 200px;
+  margin-left: 200px;
+  margin-top: 70px;
+  word-wrap: break-word;
+}
+.project-card img{
+  height: 100px;
+  width: 100px;
+  border-radius: 100px;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+  margin-top: 40px;
+    text-align: center;
+    padding: 1rem;
+}
+.cta-tag{
+  margin-right: 200px;
+  margin-left: 200px;
+  margin-top: 70px;
+  word-wrap: break-word;
+}
+#about{
+  margin-right: 200px;
+  margin-left: 200px;
+  margin-top: 70px;
+  word-wrap: break-word;
+}
+#portfolio{
+  margin-right: 200px;
+  margin-left: 200px;
+  margin-top: 70px;
+  word-wrap: break-word;
+}
+.featured-projects{
+  margin-right: 200px;
+  margin-left: 200px;
+  margin-top: 70px;
+  word-wrap: break-word;
+}
+#contact{
+  margin-right: 200px;
+  margin-left: 200px;
+  margin-top: 50px;
+  word-wrap: break-word;
+}
+#contact a{
+  color: black;
+  text-decoration: none;
+  background: white;
+  border-radius: 20px;
+  padding: 10px 10px 10px 10px;
+}
+.slider-container{
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        display: none;
+    }
+    
+    .HamBurger {
+      margin-left: 0.5em;
+      display: block;
+      margin-top: 0.2em;
+      margin-bottom: 0.2em;
+      width: 30px;
+    }
+    .menu-sidebar{
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 25%;
+      height: 100vh;
+      z-index: 11;
+      background: black;
+      opacity: 0.7;
+      overflow: hidden;
+      transform: translate(-100%);
+      transition: 0.3s linear;
+    }
+    .menu-menubar{
+      display: flex;
+      padding: 70px 10px 20px 10px;
+      justify-content: flex-start;
+      align-content: flex-start;
+    }
+    .menulist{
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+    }
+    .menu-sidebar .close-menu{
+      position: absolute;
+      right: 30px;
+      font-size: 1.4em;
+    }
+    .for-svg svg {
+      margin-top: 5px;
+      /*margin-left: 12000px;*/
+      fill: white;
+    }
+    .menulist {
+      list-style: none;
+      display: flex;
+    }
+    
+    .menulist a {
+      text-decoration: none;
+      color: var(--text-color);
+      transition: color 0.3s;
+      font-size: 15px;
+    }
+    
+ .menulist a:hover {
+      color: var(--primary-color);
+      border-bottom: 1px solid white;
+    }
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+}
+@media screen and (max-width: 480px){
+  *{
+    font-size: 16px
+    }
+    .HamBurger{
+      margin-left: 0.5em;
+      display: block;
+      margin-top: 0.2em;
+      margin-bottom: 0.2em;
+      width: 30px;
+    }
+    .tagline{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .text{
+      margin-right: 50px;
+      margin-left: 50px;
+      margin-top: 70px;
+      word-wrap: break-word;
+    }
+    .cta-tag {
+      margin-right: 50px;
+      margin-left: 50px;
+      margin-top: 70px;
+      word-wrap: break-word;
+    }
+    #about{
+      margin-right: 50px;
+      margin-left: 50px;
+      margin-top: 70px;
+      word-wrap: break-word;
+    }
+    #portfolio{
+      margin-right: 50px;
+      margin-left: 50px;
+      margin-top: 70px;
+      word-wrap: break-word;
+    }
+    #contact{
+      margin-right: 50px;
+      margin-left: 50px;
+      margin-top: 20px;
+      word-wrap: break-word;
+    }
+    .footer {
+    margin-top: 20px;
+    text-align: center;
+    padding: 1rem;
+    }
+    #contact {
+    margin-top: 350px;
+    text-align: center;
+    }
+    .featured-projects{
+    display: none;
+    }
+    
+      .slider-container {
+        width: 300px;
+        height: 350px;
+        overflow: hidden;
+        position: relative;
+        margin: auto;
+        border: 2px;
+        border-radius: 10px;
+        margin-top: 50px;
+      }
+    
+      /* Slider wrapper to hold images */
+      .slider-wrapper {
+        display: flex;
+        width: 200%;
+        height: 100%;
+        transition: transform 0.5s ease-in-out;
+      }
+    
+      /* Each slide styling */
+      .slide {
+        width: 50%;
+        height: 100%;
+        flex-shrink: 0;
+      }
+    
+      .slide img {
+        width: 300px;
+        height: 250px;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+    
+      /* Navigation buttons */
+      .slider-nav {
+        position: absolute;
+        bottom: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+      }
+    
+      .slider-container input {
+        display: none;
+      }
+    
+      .slider-nav input:checked {
+        background: #555;
+      }
+    .slide-btn{
+      border: 2px solid white;
+      padding: 5px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 1s;
+    }
+    .slide-btn:not(:last-child){
+      margin-right: 20px;
+    }
+      /* Positioning the slider using radio buttons */
+      #slide1:checked~.slider-wrapper {
+        transform: translateX(0);
+      }
+    
+      #slide2:checked~.slider-wrapper {
+        transform: translateX(-50%);
+      }
+    
+}
